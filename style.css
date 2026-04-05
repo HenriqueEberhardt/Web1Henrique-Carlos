@@ -1,0 +1,182 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2e7d32;
+    color: white;
+    padding: 10px;
+}
+
+.logo {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main {
+    padding: 20px;
+    background-color: #DDDDDD;
+}
+
+.botoes {
+    background-color: white;
+    padding: 5%;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background: #2e7d32;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+/* Tela de Login */
+.login-main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-image: url(logoEx.jpg);
+    background-size: cover;       /* cobre todo o elemento */
+    background-position: center;  /* centraliza */
+    background-repeat: no-repeat; 
+    background-size: 40%;
+    background-color: #000000;
+}
+
+#loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2); /* cor branca semi-transparente */
+    backdrop-filter: blur(4px);
+    border-radius: 10%;
+    padding: 2%;
+}
+
+#loginForm h2 {
+    margin-bottom: 25px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+#loginForm label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 21px;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.botoes {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #636B2F;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnRecupsenha {
+    background: #DDDDDD;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botoes:hover {
+    background-color: #DDDDDD;
+    color: black;
+    transition: 0.3s;
+}
+
+.btnRecupsenha:hover {
+    background-color: #636B2F;
+    color: white;
+    transition: 0.3s;
+}
