@@ -19,6 +19,8 @@ form.addEventListener("submit", function (e) {
         return;
     }
 
+    // Precisa colocar um if caso o login senha invalido
+
     sessionStorage.setItem("usuarioLogado", user.split(".")[0].toUpperCase() + " " +
         user.split(".")[1].toUpperCase());
 
@@ -34,4 +36,12 @@ form.addEventListener("submit", function (e) {
 
 function recuperarSenha() {
     alert("Teste troca de senha");
+}
+
+function cadastrarUsuario() {
+    alert("Teste cadastro de usuário");
+}
+
+function goHome() {
+    location.reload()
 }

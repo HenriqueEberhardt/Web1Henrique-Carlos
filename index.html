@@ -10,48 +10,60 @@
 <body>
 
 <header>
-    <div class="logo" onclick="goHome()">Aditamento Online</div>
+    <img src="iconMenu.svg">
+    <img class="logo" onclick="goHome()" src="exercito-brasileiro-logo-png_seeklogo-50803-removebg-preview.png">
+    <h1>Aditamento Online</h1>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Cadastrar</a></li>
-            <li><a href="#">Lista</a></li>
-        </ul>
-    </nav>
+    <div id="menu">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cadastrar</a></li>
+                <li><a href="#">Lista</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <div class="user-info">
-        <img src="https://via.placeholder.com/40">
+    <div class="infoUsuario">
         <span id="usuarioNome"></span>
     </div>
 </header>
 
 <main>
-    <section>
-        <h2>Cadastro de Serviço</h2>
+    <section id="formCadastro">
+        <h2 class="titulosIndex">Cadastro de Serviço</h2>
 
         <form id="form">
             <input type="hidden" id="indexEdit">
 
             <label>Número de Guerra:</label>
-            <input type="text" id="numero" required>
+            <input type="text" id="numero" placeholder="26XXX" required>
 
             <label>Nome de Guerra:</label>
-            <input type="text" id="nome" required>
+            <input type="text" id="nome" placeholder="SAFONILDO" required>
 
-            <label>Companhia:</label>
-            <input type="text" id="companhia" required>
+            <label for="companhia">Companhia:</label>
+
+            <input list="lista-companhias" id="companhia" name="companhia">
+
+            <datalist id="lista-companhias">
+                <option value="CCAP">
+                <option value="Primeira Companhia">
+                <option value="Segunda Companhia">
+                <option value="CFGS">
+                <option value="NPOR">
+            </datalist>
 
             <label>Data do Serviço:</label>
             <input type="date" id="data" required>
 
-            <button class="botoes" type="submit">Salvar</button>
-            <button class="botoes" type="button" onclick="limpar()">Cancelar</button>
+            <button class="botoesIndex" type="submit">Salvar</button>
+            <button class="botoesIndex" type="button" onclick="limpar()">Cancelar</button>
         </form>
     </section>
 
     <section>
-        <h2>Lista de Serviços</h2>
+        <h2 class="titulosIndex">Lista de Serviços</h2>
         <table>
         <thead>
         <tr>
