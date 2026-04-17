@@ -10,22 +10,24 @@
 <body>
 
 <header>
-    <img src="iconMenu.svg">
-    <img class="logo" onclick="goHome()" src="exercito-brasileiro-logo-png_seeklogo-50803-removebg-preview.png">
-    <h1>Aditamento Online</h1>
+    <div id="header">
+        <a onclick="menuBar()"><img onclick="menubar()" src="iconMenu.svg"></a>
+        <img class="logo" onclick="goHome()" src="exercito-brasileiro-logo-png_seeklogo-50803-removebg-preview.png">
+        <h1>Aditamento Online</h1>
 
-    <div id="menu">
-        <nav>
+        <div class="infoUsuario">
+            <span id="usuarioNome"></span>
+        </div>
+
+    </div>
+    <div class="hidden" id="menu">
+        <nav id="navLink">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Cadastrar</a></li>
                 <li><a href="#">Lista</a></li>
             </ul>
         </nav>
-    </div>
-
-    <div class="infoUsuario">
-        <span id="usuarioNome"></span>
     </div>
 </header>
 
@@ -62,20 +64,20 @@
         </form>
     </section>
 
-    <section>
+    <section id="secTabela">
         <h2 class="titulosIndex">Lista de Serviços</h2>
-        <table>
-        <thead>
-        <tr>
-        <th>Nº Guerra</th>
-        <th>Nome</th>
-        <th>Companhia</th>
-        <th>Data</th>
-        <th>Ações</th>
-        </tr>
-        </thead>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Nº Guerra</th>
+                    <th>Nome</th>
+                    <th>Companhia</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
 
-        <tbody id="tabela"></tbody>
+            <tbody id="tabela"></tbody>
         </table>
     </section>
 </main>

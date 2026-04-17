@@ -6,13 +6,24 @@ body {
     margin: 0;
 }
 
-header {
+#header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #636B2F;
     color: white;
     padding: 10px;
+}
+
+#navLink {
+    background: #7A8440;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
 }
 
 .logo {
@@ -80,7 +91,11 @@ main {
 
 .titulosIndex {
     text-align: center;
-    padding-top: 4%;
+    padding-top: 2%;
+}
+
+#secTabela {
+    margin: 0 10%;
 }
 
 table {
