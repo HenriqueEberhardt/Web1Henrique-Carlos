@@ -5,13 +5,27 @@ const tabela = document.getElementById("tabela");
 
 let dados = JSON.parse(localStorage.getItem("dados")) || [];
 
+if (!Array.isArray(dados)) {
+    dados = [];
+}
+
 window.onload = () => {
     if (localStorage.getItem("lembrar") === "true") {
         document.getElementById("usuario").value = localStorage.getItem("usuario");
         document.getElementById("lembrar").checked = true;
     }
+    if (form) {
+        carregarUsuario();
+    }
     renderizar();
 };
+
+function carregarUsuario() {
+    let user = sessionStorage.getItem("nomeDeGuerra");
+    document.getElementById("usuarioNome").innerText = user;
+}
+
+
 
 if (formLogin) {
     formLogin.addEventListener("submit", function (e) {
@@ -25,19 +39,23 @@ if (formLogin) {
             return;
         }
 
-        // Precisa colocar um if caso o login seja invalido ( Diferente de graducao/posto.nomeDeGuerra)
+        console.log(user)
+        let userFormatado = (user.split(".")[0].toUpperCase() + " " + (user.split(".")[1].toUpperCase()))
 
-        sessionStorage.setItem("usuarioLogado", user.split(".")[0].toUpperCase() + " " +
-            user.split(".")[1].toUpperCase());
-
-        if (document.getElementById("lembrar").checked) {
-            localStorage.setItem("lembrar", true);
-            localStorage.setItem("usuario", user);
+        if (user.split(".").length != 2) {
+            alert("Usuario Invalido");
         } else {
-            localStorage.setItem("lembrar", false);
-        }
+            sessionStorage.setItem("nomeDeGuerra", userFormatado);
 
-        window.location.href = "index.html";
+            if (document.getElementById("lembrar").checked) {
+                localStorage.setItem("lembrar", true);
+                localStorage.setItem("usuario", user);
+            } else {
+                localStorage.setItem("lembrar", false);
+            }
+           window.location.href = "index.html";
+
+        }
     });
 }
 
